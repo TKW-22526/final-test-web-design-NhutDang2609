@@ -1,0 +1,133 @@
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: linear-gradient(135deg, #f5e6e0, #eacfc6);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+}
+
+/* Thanh điều hướng */
+nav {
+  background: #C47D72;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 3px solid #7B3F3F;
+  box-shadow: 0 0 20px rgba(196, 125, 114, 0.5),
+              0 0 40px rgba(196, 125, 114, 0.3);
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 600;
+  margin: 5px;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+/* Khung form */
+.container {
+  background: #ffffff;
+  margin: 60px auto;
+  padding: 40px;
+  border-radius: 16px;
+  border: 3px solid #C47D72;
+  width: 600px;
+  box-shadow: 0 0 20px rgba(196, 125, 114, 0.6),
+              0 0 40px rgba(196, 125, 114, 0.4),
+              0 0 60px rgba(196, 125, 114, 0.3);
+}
+
+#title {
+  text-align: center;
+  color: #7B3F3F;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label,
+.form-group lable {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #A0544A;
+}
+
+/* Giới tính radio nằm ngang */
+.rdgioitinh {
+  display: flex;
+  gap: 20px;
+  margin-top: 6px;
+}
+
+.rdgioitinh lable {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #A0544A;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #C47D72;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-control:focus {
+  border-color: #7B3F3F;
+  box-shadow: 0 0 8px rgba(196, 125, 114, 0.5);
+}
+
+/* Nút bấm */
+.buttom {
+  width: 48%;
+  padding: 10px;
+  margin: 6px 1%;
+  border: none;
+  border-radius: 8px;
+  background-color: #C47D72;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.buttom:hover {
+  background-color: #7B3F3F;
+}
+
+/* Ẩn viền link bọc nút */
+a:has(.buttom) {
+  text-decoration: none;
+}
+
+/* Footer */
+footer {
+  background-color: #C47D72;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 0 -4px 12px rgba(196, 125, 114, 0.4);
+}
