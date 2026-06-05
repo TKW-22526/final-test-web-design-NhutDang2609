@@ -1,21 +1,72 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-	<title> FOOD  </title>
-	<meta charset="UTF-8">
-	
-
-
-	
-	
+  <meta charset="utf-8">
+  <title>SẢN PHẨM-TREO TƯỜNG</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="../css/style-sp.css">
+  <script src="../js/ban.js"></script>  
 </head>
-
 <body>
-	
+<nav>
+  <a class="nav-brand" href="../index.html">🌸 Tiệm của Bơ</a>
+  <div class="nav-links">
+    <a href="../index.html">Trang Chủ</a>
+    <a href="gioi-thieu.html">Giới Thiệu</a>
+    <a href="san-pham.html">Sản Phẩm</a>
+    
+    <a href="lien-he.html">Liên Hệ</a>
 
-	<footer>
-		<p> Wedsites được thiết kế bởi Vũ Thị Nhựt Đang@2026 trên nền tảng HTML dạng tĩnh </p>
-	</footer>
-	
+
+<a href="kho.html" class="btn btn-outline-danger"> Kho ẩn</a>
+  </div>
+</nav>
+
+<h2>Sản Phẩm - Để Bàn</h2>
+
+<div class="container-fluid mt-5">
+  <div id="product-list" class="product-grid"></div>
+</div>
+
+<script>
+  const chuoi = localStorage.getItem("shopDeletedIds") || "";
+  const deletedIds = chuoi === "" ? [] : chuoi.split(",").map(Number);
+
+  const visibleProducts = productDatabase.filter(p => !deletedIds.includes(p.id));
+
+  const container = document.getElementById("product-list");
+  container.className = "row";
+
+  visibleProducts.forEach(product => {
+    const col = document.createElement("div");
+    col.className = "col-6 col-md-4 col-lg-3 mb-4";
+    col.innerHTML = `
+      <div class="card h-100">
+        <img src="${product.img}" class="card-img-top" style="height:180px; object-fit:cover;">
+        <div class="card-body">
+          <h6 class="card-title">${product.name}</h6>
+          <p class="card-text text-danger fw-bold">${product.price.toLocaleString()} VND</p>
+          <a href="chi-tiet.html?id=${product.id}" class="btn btn-sm btn-outline-secondary w-100">Xem chi tiết</a>
+        </div>
+      </div>`;
+    container.appendChild(col);
+  });
+</script>
+
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">🌸 Tiệm của Bơ</div>
+      <div class="footer-sub">Mang vẻ đẹp vào không gian sống của bạn</div>
+    </div>
+    <div class="footer-links">
+      <a href="../index.html">Trang Chủ</a>
+      <a href="san-pham.html">Sản Phẩm</a>
+      <a href="lien-he.html">Liên Hệ</a>
+    </div>
+  </div>
+  <div class="footer-bottom">Trang web được thiết kế bởi VŨ THỊ NHỰT ĐANG @2026 · HTML tĩnh</div>
+</footer>
 </body>
 </html>

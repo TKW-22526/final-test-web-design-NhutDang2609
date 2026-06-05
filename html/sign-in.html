@@ -1,36 +1,62 @@
 <!DOCTYPE html>
 <html lang="vi">
-	<head>
-		<title>ĐĂNG NHẬP</title>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" href="../css/style-signin.css">
-	</head>
-	<body>
+  <head>
+    <title>ĐĂNG NHẬP</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/style-signin.css">
+	<script src="../js/script.js"></script>
+  </head>
+  <body>
 
-		<nav>
-			<a href="../index.html">Trang Chủ</a>
-			<a href="gioi-thieu.html">Giới Thiệu</a>
-			<a href="san-pham.html">Sản Phẩm</a>
-			<a href="chi-tiet.html">Chi Tiết</a>
-			<a href="lien-he.html">Liên Hệ</a>
-		</nav>
+    <nav>
+      <a class="nav-brand" href="../index.html">🌸 Tiệm của Bơ</a>
+  <div class="nav-links">
+    <a href="../index.html">Trang Chủ</a>
+    <a href="gioi-thieu.html">Giới Thiệu</a>
+    <a href="san-pham.html">Sản Phẩm</a>
+  
+    <a href="lien-he.html">Liên Hệ</a>
+    </nav>
+<h3 class="page-title">Đăng Nhập </h3>
+    <div class="container">
+      <form id="frmLogin">
+        
 
-		<div class="container">
-			<form id="frmLogin">
-				<h3 id="title">Đăng Nhập Hệ Thống</h3>
-				<div class="form-group">
-					<lable for="txtUsername">Tên đăng nhập:</lable>
-					<input class="form-control" type="text" id="txtUsername" name="txtUsername">
-				</div>
-				<div class="form-group">
-					<lable for="txtPassword">Mật khẩu:</lable>
-					<input class="form-control" type="text" id="txtPassword" name="txtPassword">
-				</div>
-				<input class="buttom" type="submit" id="sbLogin" name="sbLogin" value="Đăng nhập">
-				<a href="sign-up.html"><input class="buttom" type="button" value="Đăng ký"></a>
-			</form>
-		</div>
+        <div id="alertMsg" style="display:none;"></div>
 
-		<footer>Trang website được thiết kế bởi VŨ THỊ NHỰT ĐANG@2026 trên html tĩnh</footer>
-	</body>
+        <div class="form-group">
+          <label for="txtUsername">Tên đăng nhập (Email):</label>
+          <input class="form-control" type="text" id="txtUsername"
+                 name="txtUsername" placeholder="example@email.com">
+        </div>
+        <div class="form-group">
+          <label for="txtPassword">Mật khẩu:</label>
+          <input class="form-control" type="password" id="txtPassword"
+                 name="txtPassword" placeholder="Nhập mật khẩu">
+        </div>
+
+        <input class="button" type="submit" id="sbLogin" name="sbLogin" value="Đăng nhập">
+        <a href="sign-up.html"><input class="button" type="button" value="Đăng ký"></a>
+      </form>
+    </div>
+
+   <footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">🌸 Tiệm của Bơ</div>
+      <div class="footer-sub">Mang vẻ đẹp vào không gian sống của bạn</div>
+    </div>
+    <div class="footer-links">
+      <a href="../index.html">Trang Chủ</a>
+      <a href="san-pham.html">Sản Phẩm</a>
+      <a href="lien-he.html">Liên Hệ</a>
+    </div>
+  </div>
+  <div class="footer-bottom">Trang web được thiết kế bởi Vũ Thị Nhựt Đang @2026 · HTML tĩnh</div>
+</footer>
+    
+    <script>
+      UserLib.initLoginForm();
+    </script>
+  </body>
 </html>
