@@ -1,4 +1,4 @@
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
   background-color: #FAF6F1;
   color: #5C4A3A;
@@ -7,7 +7,6 @@ body {
   line-height: 1.6;
 }
 
-/* ===== NAV ===== */
 nav {
   background-color: #E8D5C4;
   padding: 14px 28px;
@@ -51,7 +50,7 @@ nav a:hover, nav a.active {
 }
 
 
-    /* PAGE TITLE */
+ 
     .page-title {
       text-align: center;
       padding: 36px 20px 10px;
@@ -62,11 +61,10 @@ nav a:hover, nav a.active {
       margin: 0 28px;
     }
 
-/* FORM */
 
 .container{
 	width:60%;
-	margin-left:33%;
+	margin-left:30%;
 	margin-bottom:5%;
 	margin-top:5%;
 
@@ -96,7 +94,7 @@ nav a:hover, nav a.active {
     }
 
     .form-group input {
-      width: 100%;
+      width: 90%;
       padding: 10px 14px;
       border: 1px solid #F7C5CC;
       border-radius: 8px;
@@ -133,7 +131,7 @@ nav a:hover, nav a.active {
 
     .button:hover { background-color: #F5EDE4; }
 
-  /* ===== FOOTER ===== */
+
 footer {
   background-color: #E8D5C4;
   border-top: 3px solid #D4B89A;

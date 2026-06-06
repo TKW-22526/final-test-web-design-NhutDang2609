@@ -1,4 +1,4 @@
-* { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
   background-color: #FAF6F1;
   color: #5C4A3A;
@@ -7,7 +7,6 @@ body {
   line-height: 1.6;
 }
 
-/* ===== NAV ===== */
 nav {
   background-color: #E8D5C4;
   padding: 14px 28px;
@@ -51,7 +50,6 @@ nav a:hover, nav a.active {
 }
 
 
-/* ===== TIÊU ĐỀ ===== */
 h2 {
   text-align: center;
   padding: 36px 20px 10px;
@@ -62,61 +60,38 @@ h2 {
   margin: 0 28px 20px;
 }
 
-/* ===== CARD GHI ĐÈ BOOTSTRAP ===== */
-.card {
-  background-color: #ffffff !important;
-  border: 1px solid #F7C5CC !important;
-  border-radius: 10px !important;
-  transition: box-shadow 0.2s;
-}
-.card:hover {
-  box-shadow: 0 4px 12px rgba(247, 197, 204, 0.5) !important;
-}
-.card-img-top {
-  border-radius: 10px 10px 0 0 !important;
-}
-.card-title {
-  font-weight: bold;
-  font-size: 15px;
-  color: #6B4F4F !important;
-  margin-bottom: 6px;
-}
-.card-text {
-  color: #c0636b !important;
-  font-size: 14px;
-  margin-bottom: 12px;
-}
 
-/* ===== NÚT XEM CHI TIẾT ===== */
+
+
 
 .btn-outline-secondary {
-  background-color: #E8D5C4 !important;
-  color: #5C4A3A !important;
-  border: none !important;
-  border-radius: 6px !important;
-  font-size: 14px !important;
+  background-color: #E8D5C4 ;
+  color: #5C4A3A ;
+  border: none ;
+  border-radius: 6px ;
+  font-size: 14px ;
   transition: background 0.2s;
 }
-.btn-outline-secondary:hover {
-  background-color: #F5EDE4 !important;
-  color: #5C4A3A !important;
+.btn-outline-secondary :hover {
+  background-color: #F5EDE4;
+  color: #5C4A3A ;
 }
 
-/* ===== NÚT KHO ẨN ===== */
+
 .btn-outline-danger {
-  color: #c0636b !important;
-  border-color: #c0636b !important;
+  color: #c0636b ;
+  border-color: #c0636b ;
   font-weight: bold;
-  border-radius: 6px !important;
+  border-radius: 6px ;
   font-size: 14px !important;
   transition: background 0.2s;
 }
 .btn-outline-danger:hover {
-  background-color: #fff0f0 !important;
-  color: #c0636b !important;
+  background-color: #fff0f0 ;
+  color: #c0636b ;
 }
 
-/* ===== FOOTER ===== */
+
 footer {
   background-color: #E8D5C4;
   border-top: 3px solid #D4B89A;

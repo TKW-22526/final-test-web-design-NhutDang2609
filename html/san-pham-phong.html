@@ -33,12 +33,12 @@
   const chuoi = localStorage.getItem("shopDeletedIds") || "";
   const deletedIds = chuoi === "" ? [] : chuoi.split(",").map(Number);
 
-  const visibleProducts = productDatabase.filter(p => !deletedIds.includes(p.id));
-
   const container = document.getElementById("product-list");
   container.className = "row";
 
-  visibleProducts.forEach(product => {
+  const visible = productDatabase.filter(p => !deletedIds.includes(p.id));
+
+  visible.forEach(product => {
     const col = document.createElement("div");
     col.className = "col-6 col-md-4 col-lg-3 mb-4";
     col.innerHTML = `
@@ -47,12 +47,27 @@
         <div class="card-body">
           <h6 class="card-title">${product.name}</h6>
           <p class="card-text text-danger fw-bold">${product.price.toLocaleString()} VND</p>
-          <a href="chi-tiet.html?id=${product.id}" class="btn btn-sm btn-outline-secondary w-100">Xem chi tiết</a>
+          <a href="chi-tiet.html?id=${product.id}" class="btn btn-sm btn-outline-secondary w-100 mb-2">Xem chi tiết</a>
+          <button onclick="xoaSanPham(${product.id}, this)" class="btn btn-sm btn-outline-danger w-100">🗑 Xóa</button>
         </div>
       </div>`;
     container.appendChild(col);
   });
+
+  function xoaSanPham(id, btn) {
+    if (!confirm("Xóa sản phẩm này?")) return;
+    deletedIds.push(id);
+    localStorage.setItem("shopDeletedIds", deletedIds.join(","));
+    btn.closest(".col-6").remove();
+  }
 </script>
+
+
+<div class="container text-center my-4">
+  <a href="them.html" class="btn btn-success" style="background-color: #E8D5C4 ;
+  color: #5C4A3A ; 
+  border: none ;"> Thêm sản phẩm</a>
+</div>
 
 <footer>
   <div class="footer-inner">
