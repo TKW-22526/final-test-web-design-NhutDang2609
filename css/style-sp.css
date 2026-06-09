@@ -1,4 +1,54 @@
 
+@media (max-width: 768px) {
+
+ 
+  nav {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px 14px;
+  }
+
+  .nav-links {
+    position: static;
+    transform: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    order: 3;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+    padding: 4px 8px;
+  }
+
+  .nav-brand {
+    font-size: 18px;
+  }
+
+  .login-bar {
+    margin-left: 0;
+    order: 2;
+  }
+
+  .slider {
+    height: 200px;
+  }
+
+  .hero h3 {
+    font-size: 17px;
+  }
+
+
+  .deco {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .deco figure img {
+    height: 180px;
+  }
+}
 body {
   background-color: #FAF6F1;
   color: #5C4A3A;

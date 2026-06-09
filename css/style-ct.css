@@ -7,6 +7,69 @@ body {
   line-height: 1.6;
 }
 
+@media (max-width: 768px) {
+
+ 
+  nav {
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 10px 14px;
+  }
+
+  .nav-brand {
+    font-size: 18px;
+  }
+
+  .nav-links {
+    position: static;
+    transform: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    gap: 4px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+ 
+  #p-image {
+    height: 250px !important;
+  }
+
+  #p-name {
+    font-size: 18px;
+  }
+
+  #p-price {
+    font-size: 15px;
+  }
+
+  
+  .d-flex.gap-2 {
+    flex-direction: column;
+  }
+
+  .btn-danger,
+  .btn-success {
+    width: 100%;
+    text-align: center;
+  }
+
+  
+  #popup {
+    width: 160px !important;
+  }
+
+  
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
 nav {
   background-color: #E8D5C4;
   padding: 14px 28px;
