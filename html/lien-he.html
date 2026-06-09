@@ -294,6 +294,25 @@ footer {
   </div>
 </div>
 
+<script>
+  document.getElementById("frmContact").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const hoTen = document.getElementById("txtHoTen").value.trim();
+    const email = document.getElementById("txtEmail").value.trim();
+    const dt = document.getElementById("txtDT").value.trim();
+    const nd = document.getElementById("txtND").value.trim();
+
+    if (!hoTen || !email || !dt || !nd) {
+      alert("Vui lòng điền đầy đủ thông tin!");
+      return;
+    }
+
+    alert("Gửi tin nhắn thành công! Chúng tôi sẽ liên hệ lại với bạn sớm nhất.");
+    this.reset();
+  });
+</script>
+
 <footer>
   <div class="footer-inner">
     <div>
@@ -302,6 +321,7 @@ footer {
     </div>
     <div class="footer-links">
       <a href="../index.html">Trang Chủ</a>
+	<a href="gioi-thieu.html">Giới Thiệu</a>
       <a href="san-pham.html">Sản Phẩm</a>
       <a href="lien-he.html">Liên Hệ</a>
     </div>
