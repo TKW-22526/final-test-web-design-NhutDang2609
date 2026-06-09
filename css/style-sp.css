@@ -143,6 +143,12 @@ footer {
     padding: 4px 8px;
   }
 
+  /* Nút Kho ẩn */
+  nav > .btn-outline-danger {
+    font-size: 12px;
+    padding: 4px 10px;
+  }
+
   h2 {
     font-size: 18px;
     margin: 0 14px 16px;
