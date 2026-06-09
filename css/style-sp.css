@@ -1,54 +1,3 @@
-
-@media (max-width: 768px) {
-
- 
-  nav {
-    flex-wrap: wrap;
-    gap: 8px;
-    padding: 10px 14px;
-  }
-
-  .nav-links {
-    position: static;
-    transform: none;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    order: 3;
-  }
-
-  .nav-links a {
-    font-size: 13px;
-    padding: 4px 8px;
-  }
-
-  .nav-brand {
-    font-size: 18px;
-  }
-
-  .login-bar {
-    margin-left: 0;
-    order: 2;
-  }
-
-  .slider {
-    height: 200px;
-  }
-
-  .hero h3 {
-    font-size: 17px;
-  }
-
-
-  .deco {
-    grid-template-columns: 1fr;
-    padding: 16px;
-  }
-
-  .deco figure img {
-    height: 180px;
-  }
-}
 body {
   background-color: #FAF6F1;
   color: #5C4A3A;
@@ -99,7 +48,6 @@ nav a:hover, nav a.active {
   background-color: #F5EDE4;
 }
 
-
 h2 {
   text-align: center;
   padding: 36px 20px 10px;
@@ -110,37 +58,33 @@ h2 {
   margin: 0 28px 20px;
 }
 
-
-
-
-
 .btn-outline-secondary {
-  background-color: #E8D5C4 ;
-  color: #5C4A3A ;
-  border: none ;
-  border-radius: 6px ;
-  font-size: 14px ;
+  background-color: #E8D5C4;
+  color: #5C4A3A;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
   transition: background 0.2s;
 }
-.btn-outline-secondary :hover {
+
+.btn-outline-secondary:hover {
   background-color: #F5EDE4;
-  color: #5C4A3A ;
+  color: #5C4A3A;
 }
 
-
 .btn-outline-danger {
-  color: #c0636b ;
-  border-color: #c0636b ;
+  color: #c0636b;
+  border-color: #c0636b;
   font-weight: bold;
-  border-radius: 6px ;
+  border-radius: 6px;
   font-size: 14px !important;
   transition: background 0.2s;
 }
-.btn-outline-danger:hover {
-  background-color: #fff0f0 ;
-  color: #c0636b ;
-}
 
+.btn-outline-danger:hover {
+  background-color: #fff0f0;
+  color: #c0636b;
+}
 
 footer {
   background-color: #E8D5C4;
@@ -169,4 +113,43 @@ footer {
   font-size: 12px;
   color: #5C4A3A;
   text-align: center;
+}
+
+
+@media (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 10px 14px;
+  }
+
+  .nav-brand {
+    font-size: 16px;
+  }
+
+  .nav-links {
+    position: static;
+    transform: none;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 4px;
+  }
+
+  .nav-links a {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  h2 {
+    font-size: 18px;
+    margin: 0 14px 16px;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 }
