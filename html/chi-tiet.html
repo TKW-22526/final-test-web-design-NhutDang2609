@@ -21,7 +21,7 @@
   </div>
 </nav>
 
-<!-- Nút giỏ hàng nổi -->
+
 <div style="position:fixed; top:80px; right:20px; z-index:999;">
   <div onclick="moGioHang()" style="cursor:pointer; position:relative; font-size:30px;">
     🛒
@@ -33,7 +33,6 @@
   </div>
 </div>
 
-<!-- Chi tiết sản phẩm -->
 <div class="container mt-5">
   <div class="row">
     <div class="col-md-5">
@@ -53,17 +52,16 @@
 </div>
 
 <script>
-  // Lấy id sản phẩm từ URL
   const id = Number(new URLSearchParams(window.location.search).get("id"));
   const sp = productDatabase.find(p => p.id === id);
 
-  // Hiển thị thông tin
+  
   document.getElementById("p-name").innerText = sp.name;
   document.getElementById("p-price").innerText = sp.price.toLocaleString() + " VND";
   document.getElementById("p-image").src = sp.img;
   document.getElementById("p-desc").innerText = sp.desc;
 
-  // Giỏ hàng lưu dạng "1,2,3"
+
   function layGio() {
     const chuoi = localStorage.getItem("shopCart") || "";
     return chuoi === "" ? [] : chuoi.split(",").map(Number);
@@ -85,7 +83,7 @@
     popup.style.display = "block";
   }
 
-  // Thêm vào giỏ
+
   function themGio() {
     const gio = layGio();
     gio.push(id);
@@ -94,13 +92,12 @@
     alert("Đã thêm vào giỏ hàng!");
   }
 
-  // Mua ngay
   function muaNgay() {
     const gio = layGio();
     gio.push(id);
     luuGio(gio);
-    window.location.href = "gio-hang.html";
-  }
+    capNhatBadge();
+}
 
   capNhatBadge();
 </script>
